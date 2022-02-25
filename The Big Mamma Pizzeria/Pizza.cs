@@ -4,16 +4,15 @@ namespace The_Big_Mamma_Pizzeria
 {
     class Pizza
     {
-        public int price;
+        private int price;
         private string name;
-        string[] toppings = { "cheese", "peperoni", "Pork" };
-        private int topping = 0;
+        private string toppings;
 
-            public Pizza(string name, int price)
+            public Pizza(string name, int price, string toppings)
         {
             this.name = name;
             this.price = price;
-            toppings = Toppings;
+            this.toppings = toppings;
         }
         #region properties
         public string Name
@@ -25,20 +24,16 @@ namespace The_Big_Mamma_Pizzeria
             get { return price; }
         }
 
-        public string[] Toppings
+        public string Toppings
         {
             get { return toppings; }
-            set { toppings = Toppings; }
         }
         #endregion
+
         #region Methods
-        public void Topping()
-        {
-            topping = RandomNumberGenerator.Generate(1, 3);
-        }
         public override string ToString()
         {
-                return "this is a " + name + " which includes " + Toppings[topping] + " and costs " + price + " kr";
+                return "this is a " + name + " which includes " + Toppings + " and costs " + price + " kr";
         }
         #endregion
     }

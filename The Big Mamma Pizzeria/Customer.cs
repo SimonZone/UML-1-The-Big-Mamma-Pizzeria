@@ -4,19 +4,23 @@ namespace The_Big_Mamma_Pizzeria
 {
     class Customer
     {
-        private string CustommerName;
+        private string CustomerName;
         private int CustomerID;
 
         public Customer(string name, int ID)
         {
-            this.CustommerName = name;
+            this.CustomerName = name;
             this.CustomerID = ID;
         }
-
+        public string CName
+        {
+            get { return CustomerName; }
+            set { CustomerName = value; }
+        }
         #region properties
         public string Name
         {
-            get { return CustommerName; }
+            get { return CustomerName; }
         }
         public int ID
         {
@@ -27,7 +31,7 @@ namespace The_Big_Mamma_Pizzeria
         #region Methods
         public override string ToString()
         {
-            return "A Customer has placed an order, their name is " + CustommerName + " with Customer ID: " + CustomerID;
+            return "Name: " + CustomerName + ", Customer ID: " + CustomerID;
         }
         #endregion
     }

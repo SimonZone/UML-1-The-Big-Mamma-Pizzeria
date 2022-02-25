@@ -4,24 +4,24 @@ namespace The_Big_Mamma_Pizzeria
 {
     class Order
     {
-        private int TotalPrice = 0; // hjælp skal bruge pizzaens pris
         private bool Delivery;
         private double OrderPrice;
         private const int DeliveryCost = 40;
         private const double Tax = 0.25;
+        private Pizza PizzaPrice;
 
         
-        public Order(bool Delivery)
+        public Order(bool Delivery, Pizza pizza)
         {
-            TotalPrice = totalprice;
+            PizzaPrice = pizza;
             this.Delivery = Delivery;
+
         }
 
         #region properties
         public int totalprice
         {
-            get { return TotalPrice; }
-            set {TotalPrice = value; }
+            get { return PizzaPrice.Price; }
         }
         public bool delivery
         {
@@ -34,21 +34,22 @@ namespace The_Big_Mamma_Pizzeria
             set { OrderPrice = value; }
         }
         #endregion
-        public void CalculateTotalPrice()
+        public double CalculateTotalPrice()
         {       
             //Calculate price for inhouse or delivery
             if (Delivery == true) 
             {
-                orderprice = TotalPrice + ( TotalPrice * Tax ) + DeliveryCost ;
+                orderprice = PizzaPrice.Price + ( PizzaPrice.Price * Tax ) + DeliveryCost ;
             } else {
-                orderprice = TotalPrice + (TotalPrice * Tax);
+                orderprice = PizzaPrice.Price + (PizzaPrice.Price * Tax);
             }
+            return orderprice;
         }
-        public double;
+
         public override string ToString()
         {
             CalculateTotalPrice();
-            return "Your Order is " + orderprice + " kr";
+            return "order is " + orderprice + " kr";
         }    
     }
 }

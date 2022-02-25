@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "The Big Mamma Pizzeria": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}

@@ -19,9 +19,10 @@ namespace The_Big_Mamma_Pizzeria
         }
 
         #region properties
-        public int totalprice
+        public int pizzaprice
         {
             get { return PizzaPrice.Price; }
+            set { PizzaPrice.Price = value; }
         }
         public bool delivery
         {
@@ -49,7 +50,14 @@ namespace The_Big_Mamma_Pizzeria
         public override string ToString()
         {
             CalculateTotalPrice();
-            return "order is " + orderprice + " kr";
+            if (delivery == true)
+            {
+                return "order is " + orderprice + " kr, this is including delivery fees";
+            } else
+            {
+                return "order is " + orderprice + " kr";
+            }
+            
         }    
     }
 }

@@ -25,6 +25,7 @@ namespace The_Big_Mamma_Pizzeria
         public int ID
         {
             get { return CustomerID; }
+            set { CustomerID = ID + 1; }
         }
         #endregion
 

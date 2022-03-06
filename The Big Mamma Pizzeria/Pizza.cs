@@ -22,6 +22,7 @@ namespace The_Big_Mamma_Pizzeria
         public int Price
         {
             get { return price; }
+            set {price = value; }
         }
 
         public string Toppings
@@ -33,7 +34,7 @@ namespace The_Big_Mamma_Pizzeria
         #region Methods
         public override string ToString()
         {
-                return "this is a " + name + " which includes " + Toppings + " and costs " + price + " kr";
+                return "- this is a " + name + " which includes " + Toppings + " and costs " + price + " kr";
         }
         #endregion
     }

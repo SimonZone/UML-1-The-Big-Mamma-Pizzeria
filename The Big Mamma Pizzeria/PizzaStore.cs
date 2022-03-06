@@ -53,6 +53,9 @@ namespace The_Big_Mamma_Pizzeria
                         $"1. {Pizza1} \n2. {Pizza2} \n3. {Pizza3}\n\n"
                     );
 
+                // fix this bug: if nothing is entered, it crashes!
+
+
                     switch (Convert.ToInt32(Console.ReadLine()))
                     {
                         case 1:

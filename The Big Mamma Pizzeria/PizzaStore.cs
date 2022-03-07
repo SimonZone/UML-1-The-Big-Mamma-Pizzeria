@@ -53,20 +53,20 @@ namespace The_Big_Mamma_Pizzeria
                         $"1. {Pizza1} \n2. {Pizza2} \n3. {Pizza3}\n\n"
                     );
 
-                // fix this bug: if nothing is entered, it crashes!
+                // fix this bug: Convert.ToInt32(Console.Read()) make the int as a ascii
 
-
-                    switch (Convert.ToInt32(Console.ReadLine()))
+                int test = Convert.ToInt32(Console.Read());
+                switch (test)
                     {
-                        case 1:
+                        case 49:
                         OrderS.pizzaprice = Pizza1.Price;
                             Console.WriteLine($"{CustomerS.Name} have ordered a {Pizza1.Name} and your {OrderS}.");
                             break;
-                        case 2:
+                        case 50:
                         OrderS.pizzaprice = Pizza2.Price;
                         Console.WriteLine($"{CustomerS.Name} have ordered a {Pizza2.Name} and your {OrderS}.");
                             break;
-                        case 3:
+                        case 51:
                         OrderS.pizzaprice = Pizza3.Price;
                         Console.WriteLine($"{CustomerS.Name} have ordered a {Pizza3.Name} and your {OrderS}.");
                             break;
